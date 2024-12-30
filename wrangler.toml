@@ -1,2 +1,14 @@
 name = "bolt-diy"
 compatibility_date = "2023-09-02"
+
+# Configuration pour Cloudflare Pages
+type = "javascript"
+
+[build]
+  # Dossier de sortie où les fichiers statiques seront générés
+  command = "npm run build" # Si tu utilises npm pour le build (ajuste si nécessaire)
+  cwd = "./"                 # Si le projet est à la racine du repo
+  output_dir = "dist"        # Dossier où les fichiers sont générés après le build
+
+[env.production]
+  name = "bolt-diy-prod"
